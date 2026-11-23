@@ -1,0 +1,19 @@
+<h2>Registrar bodega</h2>
+
+<form [formGroup]="form" (ngSubmit)="guardar()">
+  <label>
+    Nombre:
+    <input type="text" formControlName="nombre" />
+  </label>
+
+  <label>
+    Ubicación:
+    <input type="text" formControlName="ubicacion" />
+  </label>
+
+  @if (error()) {
+    <p class="error">{{ error() }}</p>
+  }
+
+  <button type="submit" [disabled]="form.invalid">Guardar</button>
+</form>

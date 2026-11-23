@@ -1,0 +1,48 @@
+<app-bodega-form (creada)="cargar()" />
+
+<h2>Productos</h2>
+
+@if (error()) {
+  <p class="error">{{ error() }}</p>
+}
+
+<table>
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Bodega</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of productosConBodega(); track item.id) {
+      <tr>
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.precio }}</td>
+        <td>{{ item.cantidad }}</td>
+        <td>{{ item.nombreBodega }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<h2>Bodegas</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Ubicación</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (bodega of bodegas(); track bodega.id) {
+      <tr>
+        <td>{{ bodega.id }}</td>
+        <td>{{ bodega.nombre }}</td>
+        <td>{{ bodega.ubicacion }}</td>
+      </tr>
+    }
+  </tbody>
+</table>

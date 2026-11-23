@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  margin: 24px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  margin-left: 8px;
+  padding: 4px;
+}
+
+button {
+  margin-top: 6px;
+  padding: 5px 12px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+th {
+  background: #eee;
+}
+
+.error {
+  color: red;
+}
